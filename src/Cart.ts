@@ -5,6 +5,8 @@ export default class Cart{
         Cookies.set("cart", JSON.stringify([]));
     }
     static get = ():Map<number, number> => {
+        let cart = Cookies.get("Cart");
+        if (!cart){ Cart.init() }
         return new Map(JSON.parse(Cookies.get("cart")));
     }
     static set = (cart:Map<number, number>) => {
