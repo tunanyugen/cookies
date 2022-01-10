@@ -1,5 +1,5 @@
 import Cart from "./Cart";
-
+console.log(Cart.get())
 Cart.init();
 console.log(Cart.get())
 Cart.addItem(1, 2);
